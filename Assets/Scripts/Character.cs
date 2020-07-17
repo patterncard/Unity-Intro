@@ -4,25 +4,19 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public int health = 10;
+
     // Start is called before the first frame update
     void Start()
     {
-        string characterName = "Austin";
-        int characterLevel = 5;
+        print(reduceHealth(2));
+        print(reduceHealth(5));
 
-        int experience = characterLevel * 5;
-        float itemDurability = 1.567f;
+    }
 
-        experience = (int)itemDurability;
-        itemDurability = experience;
+    public int reduceHealth(int amountOfReduce)
+    {
 
-        characterName = itemDurability.ToString();
-
-        bool equippable = false;
-
-        if (itemDurability > 1f)
-        {
-            experience = (int)(itemDurability * 1.5f) / characterLevel;
-        }
+        return health -= amountOfReduce;
     }
 }
