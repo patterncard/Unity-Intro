@@ -9,5 +9,14 @@ public class CubeMover : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * moveSpeed;
+
+        if (transform.position.y > 10)
+        {
+            moveSpeed *= -1;
+        }
+        if (transform.position.y < -10)
+        {
+            moveSpeed *= -1;
+        }
     }
 }
