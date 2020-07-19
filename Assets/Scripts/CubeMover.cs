@@ -8,13 +8,13 @@ public class CubeMover : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.up * moveSpeed;
+        transform.position += Vector3.right * moveSpeed;
 
-        if (transform.position.y > 10)
+        if (transform.position.x > 10)
         {
             moveSpeed *= -1;
         }
-        if (transform.position.y < -10)
+        if (transform.position.x < -10)
         {
             moveSpeed *= -1;
         }
